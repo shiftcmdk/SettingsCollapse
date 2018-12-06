@@ -1,0 +1,10 @@
+Package: com.shiftcmdk.settingscollapse
+Name: SettingsCollapse
+Depends: mobilesubstrate, org.thebigboss.libcolorpicker
+Version: 1.1
+Architecture: iphoneos-arm
+Description: Expand or hide individual sections in the Settings app.
+Maintainer: shiftcmdk
+Author: shiftcmdk
+Section: Tweaks
+Depiction: https://shiftcmdk.github.io/repo/depictions/?p=com.shiftcmdk.settingscollapse

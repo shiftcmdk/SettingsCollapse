@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Text Color</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkCell</string>
+			<key>cellClass</key>
+			<string>CustomColorCell</string>
+			<key>libcolorpicker</key>
+			<dict>
+				<key>defaults</key>
+				<string>com.shiftcmdk.settingscollapsepreferences</string>
+				<key>key</key>
+				<string>textColor</string>
+				<key>fallback</key>
+				<string>#FFFFFF</string>
+				<key>alpha</key>
+				<false/>
+			</dict>
+			<key>label</key>
+			<string>Text Color</string>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>defaultTextColor</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Default</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Background Color</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkCell</string>
+			<key>cellClass</key>
+			<string>CustomColorCell</string>
+			<key>libcolorpicker</key>
+			<dict>
+				<key>defaults</key>
+				<string>com.shiftcmdk.settingscollapsepreferences</string>
+				<key>key</key>
+				<string>backgroundColor</string>
+				<key>fallback</key>
+				<string>#007AFF</string>
+				<key>alpha</key>
+				<false/>
+			</dict>
+			<key>label</key>
+			<string>Background Color</string>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>defaultBackgroundColor</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Default</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Button title</string>
+			<key>footerText</key>
+			<string>Restart the settings app to apply changes.</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>defaults</key>
+			<string>com.shiftcmdk.settingscollapsepreferences</string>
+			<key>key</key>
+			<string>usechevron</string>
+			<key>label</key>
+			<string>Use Chevron</string>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>SettingsCollapse</string>
+</dict>
+</plist>
