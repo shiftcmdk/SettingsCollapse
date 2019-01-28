@@ -4,62 +4,62 @@
 @implementation SCOLRootListController
 
 - (NSArray *)specifiers {
-	if (!_specifiers) {
-		_specifiers = [[self loadSpecifiersFromPlistName:@"Root" target:self] retain];
-	}
+    if (!_specifiers) {
+        _specifiers = [[self loadSpecifiersFromPlistName:@"Root" target:self] retain];
+    }
 
-	return _specifiers;
+    return _specifiers;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [self clearCache];
-    [self reload];  
+    [self reload];
     
-	[super viewWillAppear:animated];
+    [super viewWillAppear:animated];
 }
 
 -(void)defaultTextColor {
-	UITableView *tableView = [self valueForKey:@"_table"];
+    UITableView *tableView = [self valueForKey:@"_table"];
 
-	NSString *path = @"/var/mobile/Library/Preferences/com.shiftcmdk.settingscollapsepreferences.plist";
+    NSString *path = @"/var/mobile/Library/Preferences/com.shiftcmdk.settingscollapsepreferences.plist";
 
-	NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithContentsOfFile:[path stringByExpandingTildeInPath]];
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithContentsOfFile:[path stringByExpandingTildeInPath]];
 
-	[dict setObject:@"" forKey:@"textColor"];
+    [dict setObject:@"" forKey:@"textColor"];
 
-	[dict writeToFile:path atomically:YES];
+    [dict writeToFile:path atomically:YES];
 
-	NSUserDefaults *defaults = [[[NSUserDefaults alloc] initWithSuiteName:@"com.shiftcmdk.settingscollapsepreferences"] autorelease];
+    NSUserDefaults *defaults = [[[NSUserDefaults alloc] initWithSuiteName:@"com.shiftcmdk.settingscollapsepreferences"] autorelease];
 
-	[defaults setObject:@"" forKey:@"textColor"];
+    [defaults setObject:@"" forKey:@"textColor"];
 
-	for (UITableViewCell *cell in tableView.visibleCells) {
-		if ([cell isKindOfClass:[PFLiteColorCell class]]) {
-			[(PFLiteColorCell *)cell updateCellDisplay];
-		}
-	}
+    for (UITableViewCell *cell in tableView.visibleCells) {
+        if ([cell isKindOfClass:[PFLiteColorCell class]]) {
+            [(PFLiteColorCell *)cell updateCellDisplay];
+        }
+    }
 }
 
 -(void)defaultBackgroundColor {
-	UITableView *tableView = [self valueForKey:@"_table"];
+    UITableView *tableView = [self valueForKey:@"_table"];
 
-	NSString *path = @"/var/mobile/Library/Preferences/com.shiftcmdk.settingscollapsepreferences.plist";
+    NSString *path = @"/var/mobile/Library/Preferences/com.shiftcmdk.settingscollapsepreferences.plist";
 
-	NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithContentsOfFile:[path stringByExpandingTildeInPath]];
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithContentsOfFile:[path stringByExpandingTildeInPath]];
 
-	[dict setObject:@"" forKey:@"backgroundColor"];
+    [dict setObject:@"" forKey:@"backgroundColor"];
 
-	[dict writeToFile:path atomically:YES];
+    [dict writeToFile:path atomically:YES];
 
-	NSUserDefaults *defaults = [[[NSUserDefaults alloc] initWithSuiteName:@"com.shiftcmdk.settingscollapsepreferences"] autorelease];
+    NSUserDefaults *defaults = [[[NSUserDefaults alloc] initWithSuiteName:@"com.shiftcmdk.settingscollapsepreferences"] autorelease];
 
-	[defaults setObject:@"" forKey:@"backgroundColor"];
+    [defaults setObject:@"" forKey:@"backgroundColor"];
 
-	for (UITableViewCell *cell in tableView.visibleCells) {
-		if ([cell isKindOfClass:[PFLiteColorCell class]]) {
-			[(PFLiteColorCell *)cell updateCellDisplay];
-		}
-	}
+    for (UITableViewCell *cell in tableView.visibleCells) {
+        if ([cell isKindOfClass:[PFLiteColorCell class]]) {
+            [(PFLiteColorCell *)cell updateCellDisplay];
+        }
+    }
 }
 
 @end

@@ -7,11 +7,11 @@
         CGSize imageSize = CGSizeMake(29.0, 29.0);
 
         self.iconImageView = [[[UIImageView alloc] initWithFrame:CGRectMake(
-			0.0, 
-			0.0, 
-			imageSize.height, 
-			imageSize.width
-		)] autorelease];
+            0.0, 
+            0.0, 
+            imageSize.height, 
+            imageSize.width
+        )] autorelease];
 
         [self.contentView addSubview:self.iconImageView];
 
@@ -51,15 +51,15 @@
 }
 
 -(void)dealloc {
-	[self.iconImageView removeFromSuperview];
-
-	self.iconImageView = nil;
-
+    [self.iconImageView removeFromSuperview];
+    
+    self.iconImageView = nil;
+    
     [self.dotView removeFromSuperview];
-
+    
     self.dotView = nil;
-
-	[super dealloc];
+    
+    [super dealloc];
 }
 
 @end

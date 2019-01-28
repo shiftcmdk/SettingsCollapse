@@ -25,8 +25,8 @@
 @end
 
 @interface PSListController: UIViewController {
-	NSMutableArray* _groups;
-	NSMutableDictionary* _specifiersByID;
+    NSMutableArray* _groups;
+    NSMutableDictionary* _specifiersByID;
 }
 
 -(id)getGroupSpecifierForSpecifierID:(id)arg1;
