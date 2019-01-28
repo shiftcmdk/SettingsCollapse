@@ -1,3 +1,5 @@
+PACKAGE_VERSION=$(THEOS_PACKAGE_BASE_VERSION)
+
 include $(THEOS)/makefiles/common.mk
 
 BUNDLE_NAME = SettingsCollapsePreferences
