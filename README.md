@@ -2,7 +2,7 @@
 
 Expand or hide individual sections in the iOS Settings app.
 
-![SettingsCollapse](settingscollapse.PNG)
+<img src="settingscollapse.PNG" alt="SettingsCollapse" width="375"/>
 
 Theme applied with [BetterSettings](https://github.com/midnightchip/BetterSettings).
 
