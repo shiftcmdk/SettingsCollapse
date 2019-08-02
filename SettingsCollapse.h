@@ -50,6 +50,7 @@
 -(void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;
 -(void)_setAirplaneMode:(BOOL)arg1;
 +(BOOL)airplaneMode;
+-(void)resetInsert:(void (^)(void))block;
 
 @end
 

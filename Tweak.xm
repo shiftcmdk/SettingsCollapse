@@ -123,7 +123,8 @@ NSMutableDictionary *toggleDict = [[NSMutableDictionary alloc] init];
 
 // Nothing to see here, only avoiding UITableView inconsistency
 
--(void)beginUpdates {
+%new
+-(void)resetInsert:(void (^)(void))block {
     isInsert = YES;
 
     UITableView *table = [self table];
@@ -134,7 +135,7 @@ NSMutableDictionary *toggleDict = [[NSMutableDictionary alloc] init];
 
     [table reloadData];
 
-    %orig;
+    block();
 
     isInsert = NO;
 
@@ -143,50 +144,132 @@ NSMutableDictionary *toggleDict = [[NSMutableDictionary alloc] init];
     [toggleDict removeAllObjects];
 
     [table reloadData];
+}
+
+-(void)beginUpdates {
+    [self resetInsert:^{
+        %orig;
+    }];
 }
 
 -(void)endUpdates {
-    isInsert = YES;
-
-    UITableView *table = [self table];
-
-    [imagesDict removeAllObjects];
-
-    [toggleDict removeAllObjects];
-
-    [table reloadData];
-
-    %orig;
-
-    isInsert = NO;
-
-    [imagesDict removeAllObjects];
-
-    [toggleDict removeAllObjects];
-
-    [table reloadData];
+    [self resetInsert:^{
+        %orig;
+    }];
 }
 
 -(void)insertOrderedSpecifier:(id)arg1 animated:(BOOL)arg2 {
-    isInsert = YES;
+    [self resetInsert:^{
+        %orig;
+    }];
+}
 
-    UITableView *table = [self table];
+-(void)insertContiguousSpecifiers:(id)arg1 atIndex:(long long)arg2 animated:(BOOL)arg3 {
+    [self resetInsert:^{
+        %orig;
+    }];
+}
 
-    [imagesDict removeAllObjects];
+-(void)_insertContiguousSpecifiers:(id)arg1 atIndex:(long long)arg2 animated:(BOOL)arg3 {
+    [self resetInsert:^{
+        %orig;
+    }];
+}
 
-    [toggleDict removeAllObjects];
-        
-    [table reloadData];
+-(void)insertContiguousSpecifiers:(id)arg1 afterSpecifier:(id)arg2 animated:(BOOL)arg3 {
+    [self resetInsert:^{
+        %orig;
+    }];
+}
 
-    %orig;
+-(void)insertContiguousSpecifiers:(id)arg1 afterSpecifierID:(id)arg2 animated:(BOOL)arg3 {
+    [self resetInsert:^{
+        %orig;
+    }];
+}
 
-    isInsert = NO;
+-(void)insertContiguousSpecifiers:(id)arg1 atEndOfGroup:(long long)arg2 animated:(BOOL)arg3 {
+    [self resetInsert:^{
+        %orig;
+    }];
+}
 
-    [imagesDict removeAllObjects];
+-(void)insertContiguousSpecifiers:(id)arg1 atIndex:(long long)arg2 {
+    [self resetInsert:^{
+        %orig;
+    }];
+}
 
-    [toggleDict removeAllObjects];
+-(void)insertContiguousSpecifiers:(id)arg1 afterSpecifier:(id)arg2 {
+    [self resetInsert:^{
+        %orig;
+    }];
+}
 
-    [table reloadData];
+-(void)insertContiguousSpecifiers:(id)arg1 afterSpecifierID:(id)arg2 {
+    [self resetInsert:^{
+        %orig;
+    }];
+}
+
+-(void)insertContiguousSpecifiers:(id)arg1 atEndOfGroup:(long long)arg2 {
+    [self resetInsert:^{
+        %orig;
+    }];
+}
+
+-(void)removeSpecifier:(id)arg1 animated:(BOOL)arg2 {
+    [self resetInsert:^{
+        %orig;
+    }];
+}
+
+-(void)removeSpecifierID:(id)arg1 animated:(BOOL)arg2 {
+    [self resetInsert:^{
+        %orig;
+    }];
+}
+
+-(void)removeSpecifierAtIndex:(long long)arg1 animated:(BOOL)arg2 {
+    [self resetInsert:^{
+        %orig;
+    }];
+}
+
+-(void)removeSpecifier:(id)arg1 {
+    [self resetInsert:^{
+        %orig;
+    }];
+}
+
+-(void)removeSpecifierID:(id)arg1 {
+    [self resetInsert:^{
+        %orig;
+    }];
+}
+
+-(void)removeSpecifierAtIndex:(long long)arg1 {
+    [self resetInsert:^{
+        %orig;
+    }];
+}
+
+-(void)_removeContiguousSpecifiers:(id)arg1 animated:(BOOL)arg2 {
+    [self resetInsert:^{
+        %orig;
+    }];
+}
+
+-(void)addSpecifiersFromArray:(id)arg1 animated:(BOOL)arg2 {
+    [self resetInsert:^{
+        %orig;
+    }];
+}
+
+-(void)addSpecifiersFromArray:(id)arg1 {
+    [self resetInsert:^{
+        %orig;
+    }];
 }
 
 -(void)viewDidLoad {

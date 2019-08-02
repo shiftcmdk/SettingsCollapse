@@ -2,6 +2,8 @@ PACKAGE_VERSION=$(THEOS_PACKAGE_BASE_VERSION)
 
 include $(THEOS)/makefiles/common.mk
 
+ARCHS = arm64 arm64e
+
 TWEAK_NAME = SettingsCollapse
 SettingsCollapse_FILES = Tweak.xm AppsPagingView.m CustomHeaderFooterView.m AppIconCell.m
 SettingsCollapse_LIBRARIES = colorpicker

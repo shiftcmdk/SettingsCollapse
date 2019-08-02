@@ -2,6 +2,8 @@ PACKAGE_VERSION=$(THEOS_PACKAGE_BASE_VERSION)
 
 include $(THEOS)/makefiles/common.mk
 
+ARCHS = arm64 arm64e
+
 BUNDLE_NAME = SettingsCollapsePreferences
 SettingsCollapsePreferences_FILES = SCOLRootListController.m CustomColorCell.m
 SettingsCollapsePreferences_INSTALL_PATH = /Library/PreferenceBundles
