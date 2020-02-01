@@ -1,10 +1,10 @@
-Package: com.shiftcmdk.settingscollapse
-Name: SettingsCollapse
+Package: com.shiftcmdk.settingscollapse13
+Name: SettingsCollapse For iOS13
 Depends: mobilesubstrate, org.thebigboss.libcolorpicker|me.nepeta.libcolorpicker
-Version: 1.1.1
+Version: 1.1.1.4
 Architecture: iphoneos-arm
-Description: Expand or hide individual sections in the Settings app.
-Maintainer: shiftcmdk
-Author: shiftcmdk
+Description: 更新ios13中文修复，无须再安装ios13修复包。Expand or hide individual sections in the Settings app.
+Maintainer: shiftcmdk, whoami
+Author: shiftcmdk, whoami
 Section: Tweaks
 Depiction: https://shiftcmdk.github.io/repo/depictions/?p=com.shiftcmdk.settingscollapse

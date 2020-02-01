@@ -486,7 +486,7 @@ NSMutableDictionary *toggleDict = [[NSMutableDictionary alloc] init];
     NSString *showMore = @"Show More";
     NSString *showLess = @"Show Less";
 
-    NSBundle *widgetsBundle = [NSBundle bundleWithPath:@"/System/Library/PrivateFrameworks/Widgets.framework"];
+    NSBundle *widgetsBundle = [NSBundle bundleWithPath:@"/Library/Application Support/com.shiftcmdk.settingscollapse.bundle"];
 
     NSUserDefaults *defaults = [[[NSUserDefaults alloc] initWithSuiteName:@"com.shiftcmdk.settingscollapsepreferences"] autorelease];
 
@@ -497,7 +497,7 @@ NSMutableDictionary *toggleDict = [[NSMutableDictionary alloc] init];
     if ([sectionSet containsObject:groupIdentifier]) {
         if (!useChevron) {
             if (widgetsBundle) {
-                showMore = [widgetsBundle localizedStringForKey:@"SHOW_MORE_TITLE" value:@"Show More" table:@"Widgets"];
+                showMore = [widgetsBundle localizedStringForKey:@"SHOW_MORE_TITLE" value:@"Show More" table:@""];
             }
 
             [sectionHeaderView.expandHideButton setTitle:showMore forState:UIControlStateNormal];
@@ -512,7 +512,7 @@ NSMutableDictionary *toggleDict = [[NSMutableDictionary alloc] init];
     } else {
         if (!useChevron) {
             if (widgetsBundle) {
-                showLess = [widgetsBundle localizedStringForKey:@"SHOW_LESS_TITLE" value:@"Show Less" table:@"Widgets"];
+                showLess = [widgetsBundle localizedStringForKey:@"SHOW_LESS_TITLE" value:@"Show Less" table:@""];
             }
 
             [sectionHeaderView.expandHideButton setTitle:showLess forState:UIControlStateNormal];
